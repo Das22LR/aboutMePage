@@ -3,9 +3,9 @@ export default function aboutMeBadges() {
         { name: "Github", color: "bg-red-300", url: "https://github.com/Das22LR" },
         { name: "Tiktok", color: "bg-blue-300", url: "https://www.tiktok.com/@das22lr" },
         { name: "YouTube", color: "bg-yellow-300", url: "https://www.youtube.com/@DefinitelyNot22LR" },
+        { name: "Discord", color: "bg-green-300", url: "https://discord.com/users/766257667538550826"},
         { name: "Birthday", color: "bg-slate-300", content: "January 6" },
         { name: "Location", color: "bg-slate-300", content: "Selangor, Malaysia" },
-        { name: "Discord", color: "bg-slate-300", content: "_22lr" },
     ];
 
     return badges

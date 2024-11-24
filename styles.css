@@ -1,40 +1,89 @@
-/* Container for the badges */
-#badges {
-    display: flex;                /* Use Flexbox to align items horizontally */
-    flex-wrap: wrap;              /* Allow badges to wrap onto new lines if necessary */
-    gap: 15px;                    /* Add space between the badges */
-    justify-content: center;      /* Center badges horizontally */
-    padding: 20px;                /* Add some padding around the container */
-}
-
-/* Style for each badge (button) */
 .badge {
-    display: inline-block;        /* Make sure the badges appear inline */
-    padding: 10px 20px;           /* Add padding for a button-like feel */
-    border-radius: 25px;          /* Rounded corners */
-    text-align: center;           /* Center the text inside each badge */
-    text-decoration: none;        /* Remove underline */
-    color: white;                 /* Text color */
-    font-size: 16px;              /* Font size */
-    font-weight: bold;            /* Bold text */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
+    margin: 5px;
 }
 
-/* Hover effect for badges */
+.bg-red-300 { background-color: #f87171; }
+.bg-red-300:hover { background-color: #f44336; }
+.bg-blue-300 { background-color: #93c5fd; }
+.bg-blue-300:hover { background-color: #3b82f6; }
+.bg-yellow-300 { background-color: #f0df5d; }
+.bg-yellow-300:hover { background-color: #facc15; }
+.bg-green-300 { background-color: #56d926; }
+.bg-green-300:hover { background-color: #46ac21; }
+.bg-slate-300 { background-color: #e2e8f0; }
+.bg-slate-300:hover { background-color: #cbd5e1; }
+
 .badge:hover {
-    transform: scale(1.1);        /* Slightly enlarge the badge on hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Make the shadow more prominent */
+    background-color: lighten(currentColor, 10%);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Style for badges that do not have a URL (static badges) */
 .static-badge {
-    cursor: default;              /* Make sure these don't look clickable */
-    background-color: #ccc;       /* Gray background for static badges */
+    cursor: default;
 }
 
-/* Specific colors for each badge */
-.bg-red-300 { background-color: #f87171; }  /* Github Badge */
-.bg-blue-300 { background-color: #93c5fd; } /* Tiktok Badge */
-.bg-yellow-300 { background-color: #fef08a; } /* YouTube Badge */
-.bg-slate-300 { background-color: #e2e8f0; } /* Static badges like Birthday, Location, etc. */
+.non-static-badge::after {
+    content: " | ";
+    font-weight: normal;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.static-badge {
+    display: inline-block;
+    color: #666;
+}
+
+.static-badge.bg-red-300 { background-color: #e33434; }
+.static-badge.bg-blue-300 { background-color: #3b82f6; }
+.static-badge.bg-yellow-300 { background-color: #d8b40f; }
+.static-badge.bg-slate-300 { background-color: #cbd5e1; }
+.static-badge.bg-discord { background-color: #5f6b94; }
+
+@media (max-width: 768px) {
+    .badge {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.solid-black-banner {
+    width: 100%;
+    height: 275px; 
+    background-color: black; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.about-me-bg {
+    font-size: 1.125rem; 
+    font-weight: bold;
+    background-color: rgba(0, 0, 128, 0.5);
+    padding: 12px 16px; 
+    border-radius: 0.75rem; 
+    backdrop-filter: blur(4px); 
+    color: white;
+    text-align: left; 
+}

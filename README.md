@@ -4,10 +4,9 @@
 
 # KNOWN ISSUES:
 
-# - AboutMeBadges not applying into the HTML file (FIXED)
+# - Banner size incorrect (Banner is currently a black bg as a substitude)
+# - 'About Me' H1's padding incorrect (y-axis 16px)
 
 # FUTURE FEATURES (TBC):
 
 # - Socials Tab (For Ver A)
-# - Website Icon
-# - Top GIF (Banner)
