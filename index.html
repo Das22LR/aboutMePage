@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student CV</title>
+    <title>Das22LR</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -44,8 +44,18 @@
     <header>
         <img src="https://avatars.githubusercontent.com/u/94290625?v=4" alt="Profile Picture" width="150" height="150">
         <p><strong>Email:</strong> <a href="mailto:jkil32354@gmail.com">jkil32354@gmail.com</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Das22LR" target="_blank">Your GitHub Profile</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Das22LR" target="_blank">Das22LR</a></p>
     </header>
+
+    <h1>About Me</h1>
+    <div id="badges"></div>
+
+    <script type="module">
+        import aboutMeBadges from './components/script.js';
+
+        // Call the function and render badges
+        document.getElementById("badges").innerHTML = aboutMeBadges();
+    </script>
 
     <hr>
     
@@ -117,6 +127,5 @@
         <p>*This CV was created with Markdown and hosted on GitHub Pages.*</p>
     </div>
 
-    <script async src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </body>
 </html>
