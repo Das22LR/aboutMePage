@@ -4,9 +4,12 @@
 
 # KNOWN ISSUES:
 
-# - Banner size incorrect (Banner is currently a black bg as a substitude)
-# - 'About Me' H1's padding incorrect (y-axis 16px)
+# - Banner size incorrect (Banner is currently a black bg as a substitude, psbl incrt px size?)
+# - Badges too much to the left (apply padding -> err | make it in the center?)
 
 # FUTURE FEATURES (TBC):
 
-# - Socials Tab (For Ver A)
+# - Socials Tab (For Ver A) (Off track until 'about me' section is complete)
+# - Animated background (In progress)
+# - Make the links open in another tab (JS? In Progress)
+# - Make the badges and H1's opacity higher, and make them more square (In progress)

@@ -1,33 +1,55 @@
 .badge {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border: 2px solid transparent;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
-    margin: 5px;
+    display: inline-flex; /* Makes badges flexible and inline */
+    justify-content: center; /* Centers content inside each badge */
+    align-items: center; /* Vertically centers text */
+    width: 120px; /* Default width for static badges */
+    height: 45px; /* Default height for static badges */
+    color: white; /* Default text color */
+    font-size: 0.875rem; /* Smaller font size */
+    font-weight: bold; /* Bold text for clarity */
+    text-align: center; /* Centers text inside the badge */
+    border-radius: 8px; /* Rounded corners for softer edges */
+    margin: 4px 8px; /* Further reduced vertical and horizontal space */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
-.bg-red-300 { background-color: #f87171; }
-.bg-red-300:hover { background-color: #f44336; }
-.bg-blue-300 { background-color: #93c5fd; }
-.bg-blue-300:hover { background-color: #3b82f6; }
-.bg-yellow-300 { background-color: #f0df5d; }
-.bg-yellow-300:hover { background-color: #facc15; }
-.bg-green-300 { background-color: #56d926; }
-.bg-green-300:hover { background-color: #46ac21; }
-.bg-slate-300 { background-color: #e2e8f0; }
-.bg-slate-300:hover { background-color: #cbd5e1; }
+/* Individual badge colors */
+.badge.github {
+    background-color: #c9302c; /* Darker red */
+}
 
+.badge.tiktok {
+    background-color: #31a2c4; /* Darker blue */
+}
+
+.badge.youtube {
+    background-color: #e6922e; /* Darker orange */
+}
+
+.badge.birthday,
+.badge.location,
+.badge.discord {
+    background-color: #5a6268; /* Darker slate-gray */
+    flex-direction: column; /* Stack text vertically */
+    width: 180px; /* Increased width for non-static badges */
+    height: 50px; /* Taller for readability */
+    padding: 2px; /* Slight inner spacing */
+}
+
+/* Hover effects */
 .badge:hover {
-    background-color: lighten(currentColor, 10%);
+    filter: brightness(1.2); /* Brightens on hover */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     border-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Badge container for alignment */
+.badge-container {
+    display: flex; /* Flexbox to align badges */
+    justify-content: center; /* Centers badges horizontally */
+    flex-wrap: wrap; /* Allows wrapping if space is limited */
+    gap: 10px; /* Reduced spacing between badges */
+    padding: 10px; /* Minimal padding around the container */
 }
 
 .static-badge {
@@ -45,12 +67,6 @@
     display: inline-block;
     color: #666;
 }
-
-.static-badge.bg-red-300 { background-color: #e33434; }
-.static-badge.bg-blue-300 { background-color: #3b82f6; }
-.static-badge.bg-yellow-300 { background-color: #d8b40f; }
-.static-badge.bg-slate-300 { background-color: #cbd5e1; }
-.static-badge.bg-discord { background-color: #5f6b94; }
 
 @media (max-width: 768px) {
     .badge {
@@ -78,12 +94,16 @@ body, html {
 }
 
 .about-me-bg {
-    font-size: 1.125rem; 
-    font-weight: bold;
-    background-color: rgba(0, 0, 128, 0.5);
-    padding: 12px 16px; 
-    border-radius: 0.75rem; 
-    backdrop-filter: blur(4px); 
-    color: white;
-    text-align: left; 
+    display: block; /* Makes the element take up the full width */
+    padding: 12px 8px; /* Reduces internal horizontal padding */
+    background-color: rgba(0, 0, 128, 0.5); /* Navy background with opacity */
+    border-radius: 0.5rem; /* Slightly rounded corners */
+    backdrop-filter: blur(4px); /* Subtle blur effect */
+    color: white; /* White text for visibility */
+    font-size: 1.125rem; /* Large font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Centers the text */
+    margin: 20px auto; /* Adds space above and below */
+    width: calc(100% - 20px); /* Leaves minimal space on the sides */
+    max-width: 1470px; /* Ensures it doesn't stretch too much on large screens */
 }
