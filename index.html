@@ -39,6 +39,9 @@
             color: #666;
         }
     </style>
+
+<link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
     <header>
@@ -51,7 +54,7 @@
     <div id="badges"></div>
 
     <script type="module">
-        import aboutMeBadges from './components/script.js';
+        import aboutMeBadges from './src/components/badges.js';
 
         // Call the function and render badges
         document.getElementById("badges").innerHTML = aboutMeBadges();

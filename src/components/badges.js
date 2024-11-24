@@ -8,17 +8,16 @@ export default function aboutMeBadges() {
         { name: "Discord", color: "bg-slate-300", content: "_22lr" },
     ];
 
-    // Generate HTML for badges
     return badges
         .map(badge => {
             if (badge.url) {
-                // Render a clickable badge
-                return `<a href="${badge.url}" class="${badge.color}" style="display:block; padding:5px; margin:5px; color:black; text-decoration:none;">
+                // Render a clickable badge with the "badge" class and color
+                return `<a href="${badge.url}" class="badge ${badge.color}">
                             ${badge.name}
                         </a>`;
             } else {
-                // Render a non-clickable badge with content
-                return `<div class="${badge.color}" style="display:block; padding:5px; margin:5px;">
+                // Render a non-clickable badge with the "static-badge" class
+                return `<div class="badge ${badge.color} static-badge">
                             <strong>${badge.name}:</strong> ${badge.content}
                         </div>`;
             }

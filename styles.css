@@ -1,0 +1,40 @@
+/* Container for the badges */
+#badges {
+    display: flex;                /* Use Flexbox to align items horizontally */
+    flex-wrap: wrap;              /* Allow badges to wrap onto new lines if necessary */
+    gap: 15px;                    /* Add space between the badges */
+    justify-content: center;      /* Center badges horizontally */
+    padding: 20px;                /* Add some padding around the container */
+}
+
+/* Style for each badge (button) */
+.badge {
+    display: inline-block;        /* Make sure the badges appear inline */
+    padding: 10px 20px;           /* Add padding for a button-like feel */
+    border-radius: 25px;          /* Rounded corners */
+    text-align: center;           /* Center the text inside each badge */
+    text-decoration: none;        /* Remove underline */
+    color: white;                 /* Text color */
+    font-size: 16px;              /* Font size */
+    font-weight: bold;            /* Bold text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for badges */
+.badge:hover {
+    transform: scale(1.1);        /* Slightly enlarge the badge on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Make the shadow more prominent */
+}
+
+/* Style for badges that do not have a URL (static badges) */
+.static-badge {
+    cursor: default;              /* Make sure these don't look clickable */
+    background-color: #ccc;       /* Gray background for static badges */
+}
+
+/* Specific colors for each badge */
+.bg-red-300 { background-color: #f87171; }  /* Github Badge */
+.bg-blue-300 { background-color: #93c5fd; } /* Tiktok Badge */
+.bg-yellow-300 { background-color: #fef08a; } /* YouTube Badge */
+.bg-slate-300 { background-color: #e2e8f0; } /* Static badges like Birthday, Location, etc. */
