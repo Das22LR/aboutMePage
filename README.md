@@ -4,7 +4,7 @@
 
 # KNOWN ISSUES:
 
-# - AboutMeBadges not applying into the HTML file
+# - AboutMeBadges not applying into the HTML file (FIXED)
 
 # FUTURE FEATURES (TBC):
 
