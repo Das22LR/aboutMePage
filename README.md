@@ -11,5 +11,5 @@
 # FUTURE FEATURES (TBC):
 
 # - Socials Tab (For Ver A) (Off track until 'about me' section is complete)
-# - Animated background (In progress, ERR -> Not scrollable)
+# - Animated background (Off track until main page structure is ok)
 # - Make the badges and H1's opacity higher & make non-static badges longer (In progress)
