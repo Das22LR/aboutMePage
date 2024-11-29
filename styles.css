@@ -1,55 +1,85 @@
 .badge {
-    display: inline-flex; /* Makes badges flexible and inline */
-    justify-content: center; /* Centers content inside each badge */
+    display: inline-flex; /* Keeps badges inline */
     align-items: center; /* Vertically centers text */
-    width: 120px; /* Default width for static badges */
-    height: 45px; /* Default height for static badges */
-    color: white; /* Default text color */
-    font-size: 0.875rem; /* Smaller font size */
-    font-weight: bold; /* Bold text for clarity */
-    text-align: center; /* Centers text inside the badge */
-    border-radius: 8px; /* Rounded corners for softer edges */
-    margin: 4px 8px; /* Further reduced vertical and horizontal space */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    justify-content: center; /* Horizontally centers text */
+    background-color: #3b4a58; /* Dark muted background */
+    color: #e5e5e5; /* Light text color */
+    border-radius: 8px; /* Slightly rounded corners */
+    height: 40px; /* Uniform height */
+    padding: 0 16px; /* Horizontal padding */
+    margin: 8px; /* Space between badges */
+    font-size: 14px; /* Text size */
+    font-weight: 500; /* Slightly bold */
+    white-space: nowrap; /* Prevents text wrapping */
+    text-transform: capitalize; /* Capitalizes each word */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.2s ease; /* Smooth hover effect */
 }
 
-/* Individual badge colors */
-.badge.github {
-    background-color: #c9302c; /* Darker red */
-}
-
-.badge.tiktok {
-    background-color: #31a2c4; /* Darker blue */
-}
-
-.badge.youtube {
-    background-color: #e6922e; /* Darker orange */
-}
-
-.badge.birthday,
-.badge.location,
-.badge.discord {
-    background-color: #5a6268; /* Darker slate-gray */
-    flex-direction: column; /* Stack text vertically */
-    width: 180px; /* Increased width for non-static badges */
-    height: 50px; /* Taller for readability */
-    padding: 2px; /* Slight inner spacing */
-}
-
-/* Hover effects */
 .badge:hover {
-    filter: brightness(1.2); /* Brightens on hover */
+    background-color: #475868; /* Brightens the background slightly on hover */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     border-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Badge container for alignment */
+.non-static-badge {
+    display: inline-flex; /* Aligns content horizontally */
+    align-items: center; /* Vertically centers text */
+    justify-content: center; /* Centers text within the badge */
+    background-color: #324250; /* Dark background for non-static badges */
+    border-left: 3px solid #e5e5e5; /* Distinctive left border */
+    padding: 8px 16px; /* Proper padding for space */
+    min-width: 240px; /* Ensures enough space */
+    height: 40px; /* Uniform height */
+    color: #e5e5e5; /* Light text color */
+    font-size: 14px; /* Readable text size */
+    font-weight: 500; /* Slightly bold */
+    white-space: nowrap; /* Prevents text wrapping */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensures no overflow */
+    text-overflow: ellipsis; /* Handles overflow gracefully */
+}
+
+/* Individual badge colors */
+.badge.github {
+    background-color: #525252; 
+}
+
+.badge.tiktok {
+    background-color: #c231c4; 
+}
+
+.badge.youtube {
+    background-color: #f70000;
+}
+
+.badge.discord {
+    background-color: #17058b;
+}
+
+.badge.birthday,
+.badge.location {
+    background-color: #5a6268; /* Darker slate-gray */
+    width: auto; /* Adjust width based on content */
+    height: 40px; /* Uniform height for all badges */
+    padding: 0 16px; /* Consistent padding */
+    display: inline-flex; /* Keeps text on a single line */
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    border-left: 3px solid #e5e5e5; /* Left border for distinction */
+    flex-direction: row; /* Ensures text is laid out in a single line */
+    white-space: nowrap; /* Prevents text wrapping */
+    overflow: hidden; /* Prevents text overflow */
+    text-overflow: ellipsis; /* Adds ellipsis for overflowing text */
+}
+
 .badge-container {
-    display: flex; /* Flexbox to align badges */
-    justify-content: center; /* Centers badges horizontally */
-    flex-wrap: wrap; /* Allows wrapping if space is limited */
-    gap: 10px; /* Reduced spacing between badges */
-    padding: 10px; /* Minimal padding around the container */
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center badges horizontally */
+    flex-wrap: wrap; /* Allow badges to wrap */
+    gap: 10px; /* Space between badges */
+    padding: 10px; /* Padding around container */
 }
 
 .static-badge {
@@ -57,10 +87,9 @@
 }
 
 .non-static-badge::after {
-    content: " | ";
-    font-weight: normal;
-    padding-left: 5px;
-    padding-right: 5px;
+    content: "";
+    padding-left: 0; /* Remove additional padding */
+    padding-right: 0;
 }
 
 .static-badge {
