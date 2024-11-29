@@ -5,7 +5,7 @@
 # KNOWN ISSUES:
 
 # - Banner size incorrect (Banner is currently a black bg as a substitude, psbl incrt px size?)
-# - Badges too much to the left (apply padding -> err | make it in the center?)
+# - Non-static badges' text incorrectly alligned (not in one line)
 
 # FUTURE FEATURES (TBC):
 
